@@ -1,0 +1,24 @@
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable({"cols":[{"id":"Concept","label":"Concept","type":"string"},{"id":"Score","label":"Score","type":"number"}],"rows":[{"c":[{"v":"earth sciences (USGS)"},{"v":3.102641056422569}]},{"c":[{"v":"earthquakes (USGS)"},{"v":1.3333333333333333}]},{"c":[{"v":"economic geology (USGS)"},{"v":3.5267175572519083}]},{"c":[{"v":"engineering geology (USGS)"},{"v":3.5267175572519083}]},{"c":[{"v":"erosion (USGS)"},{"v":1.2}]},{"c":[{"v":"fossils (USGS)"},{"v":1.4285714285714286}]},{"c":[{"v":"geochronology (USGS)"},{"v":1.2}]},{"c":[{"v":"geologic maps (USGS)"},{"v":4.372222222222222}]},{"c":[{"v":"geology (USGS)"},{"v":1.5267175572519085}]},{"c":[{"v":"geophysics (USGS)"},{"v":1.2}]},{"c":[{"v":"glaciology (USGS)"},{"v":1.0}]},{"c":[{"v":"hydrogeology (USGS)"},{"v":1.0}]},{"c":[{"v":"laboratories (USGS)"},{"v":1.1666666666666667}]},{"c":[{"v":"lithosphere (USGS)"},{"v":1.3333333333333333}]},{"c":[{"v":"meteorology (USGS)"},{"v":1.0}]},{"c":[{"v":"methods (USGS)"},{"v":1.7}]},{"c":[{"v":"mineralogy (USGS)"},{"v":1.5}]},{"c":[{"v":"paleontology (USGS)"},{"v":1.0}]},{"c":[{"v":"petrology (USGS)"},{"v":1.2222222222222223}]},{"c":[{"v":"sciences (USGS)"},{"v":1.7352941176470589}]},{"c":[{"v":"sedimentary rocks (USGS)"},{"v":3.537280701754386}]},{"c":[{"v":"stratigraphy (USGS)"},{"v":1.3333333333333333}]},{"c":[{"v":"structural geology (USGS)"},{"v":3.5267175572519083}]},{"c":[{"v":"Lithosphere (UAT)"},{"v":1.3333333333333333}]},{"c":[{"v":"Mantle (UAT)"},{"v":1.6363636363636365}]},{"c":[{"v":"Methods (UAT)"},{"v":1.7}]},{"c":[{"v":"Plate tectonics (UAT)"},{"v":4.138823529411765}]}]});
+
+        var options = {
+          title: 'USGS and UAT Vocabulary Concepts in Geology Wiki',
+          colors: ['chocolate']
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 100em; height: 37.5em;"></div>
+  </body>
+</html>
